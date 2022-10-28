@@ -50,6 +50,7 @@ jobs:
           namespace: ${{ secrets.NAMESPACE }}
           # image config
           destination: gcr.io/ship-interfaces-dev/github-actions-poc
+          serviceaccountname: kpack-service-account
           env: |
             BP_JAVA_VERSION=17
 
