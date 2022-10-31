@@ -20,6 +20,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: vmware-tanzu/build-image-action
+          ref: cluster-builder
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
           persist-credentials: false
           path: ./.github/actions/build-image-action
@@ -51,6 +52,7 @@ jobs:
           # image config
           destination: gcr.io/kontinue/emj/app-action
           serviceAccountName: kpack-service-account
+          clusterBuilder: my-special-builder
           env: |
             BP_JAVA_VERSION=17
 
