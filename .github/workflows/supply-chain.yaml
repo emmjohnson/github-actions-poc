@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: vmware-tanzu/build-image-action
-          ref: 1e311fc322080a13d661033cc1a673bc0681287d
+          ref: 1fd131a4625e0b47ac7d2d1d36fc8a5b9202e5d1
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
           persist-credentials: false
           path: ./.github/actions/build-image-action
