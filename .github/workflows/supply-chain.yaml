@@ -52,6 +52,7 @@ jobs:
           # image config
           destination: gcr.io/kontinue/emj/app-action
           serviceAccountName: kpack-service-account
+          clusterBuilder: my-builder
           env: |
             BP_JAVA_VERSION=17
 
