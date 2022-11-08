@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: vmware-tanzu/build-image-action
-          ref: 1fd131a4625e0b47ac7d2d1d36fc8a5b9202e5d1
+          ref: 8502cd2795f6de032a3b409607f4ab8298f69d5b
           token: ${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}
           persist-credentials: false
           path: ./.github/actions/build-image-action
@@ -29,7 +29,7 @@ jobs:
       - name: ghcr.io docker registry login
         run: |
           echo "${{ secrets.PRIVATE_REPO_ACCESS_TOKEN }}" | docker login ghcr.io -u "empty" --password-stdin
-          docker pull ghcr.io/vmware-tanzu/build-image-action:pr-18
+          docker pull ghcr.io/vmware-tanzu/build-image-action:main
 
       - uses: actions/setup-java@v3
         with:
@@ -52,7 +52,7 @@ jobs:
           # image config
           destination: gcr.io/kontinue/emj/app-action
           serviceAccountName: kpack-service-account
-          clusterBuilder: my-builder
+          timeout: 4242
           env: |
             BP_JAVA_VERSION=17
 
