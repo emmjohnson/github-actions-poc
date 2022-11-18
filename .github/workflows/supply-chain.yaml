@@ -41,7 +41,7 @@ jobs:
 
       - name: Build Image
         id: build
-        uses: vmware-tanzu/build-image-action@v1
+        uses: vmware-tanzu/build-image-action@v1-alpha
 #        uses: ./.github/actions/build-image-action
         with:
           # auth
