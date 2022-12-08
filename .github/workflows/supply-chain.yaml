@@ -34,9 +34,7 @@ jobs:
           ca_cert: ${{ secrets.CA_CERT }}
           namespace: ${{ secrets.NAMESPACE }}
           # image config
-          destination: gcr.io/kontinue/emj/app-action
-          serviceAccountName: kpack-service-account
-          timeout: 4242
+          destination: us-east1-docker.pkg.dev/kontinue/tctc-emj3-ar/tcc-test/emj-app-action
           env: |
             BP_JAVA_VERSION=17
 
