@@ -35,7 +35,6 @@ jobs:
           namespace: ${{ secrets.NAMESPACE }}
           # image config
           destination: gcr.io/kontinue/emj/app-action
-          serviceAccountName: kpack-service-account
           timeout: 4242
           env: |
             BP_JAVA_VERSION=17
