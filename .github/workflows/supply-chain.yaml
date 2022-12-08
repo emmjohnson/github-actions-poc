@@ -29,10 +29,10 @@ jobs:
         uses: vmware-tanzu/build-image-action@v1-alpha
         with:
           # auth
-          server: ${{ secrets.SERVER }}
-          token: ${{ secrets.TOKEN }}
-          ca_cert: ${{ secrets.CA_CERT }}
-          namespace: ${{ secrets.NAMESPACE }}
+          server: ${{ secrets.SERVER_OPENSHIFT }}
+          token: ${{ secrets.TOKEN_OPENSHIFT }}
+          ca_cert: ${{ secrets.CA_CERT_OPENSHIFT }}
+          namespace: ${{ secrets.NAMESPACE_OPENSHIFT }}
           # image config
           destination: gcr.io/kontinue/emj/app-action
           serviceAccountName: kpack-service-account
